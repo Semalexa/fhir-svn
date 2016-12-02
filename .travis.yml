@@ -31,9 +31,8 @@ env:
 deploy:
   provider: s3
   skip_cleanup: true
-  access_key_id: kEDyi5RfvtJVV3xyBqW8/SoXMX+G9YpGIwhYHjuA
-  secret_access_key:
-    secure: hyf86vZVzf1z/u9oYTASSADKlAni+9TjPsGF5ImMouX5j3YoUMZ9d76iXjjgvd+FWxDWWtrPNIx8prpYFCLjF9zchzqWrwqrqdS0eHem5Dszvh3itQ4b+vuMTLKw+wZOFj7ylaFShnOEKVaZNcvGUPYnJLQXNy2Yf/r4tWSOPlQ=
+  access_key_id: AKIAJYYBL54CJKWOCMAQ
+  secret_access_key: 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
   bucket: fhir-build-test
   local-dir: hl7-fhir.github.io
   acl: public_read
