@@ -30,6 +30,7 @@ env:
     secure: MV6r5LHUxQns93+NuKCv+iJPDLoSRSXpJ5YNq36mlO7pKIiHxWOYkrdxaXFyZU7lJzYMuJuFFpPPmzBNN8AqGo+3GY/ge6cODbYyAyS+PPUnazKNSyha7Hu9XQh1px44NBgnwE3wbltXYYvwQbHe8vXhDwBLXYZe9xj0g4YY4ms=
 deploy:
   provider: s3
+  skip_cleanup: true
   access_key_id: AKIAI5IWFLWYKLYRUGPQ
   secret_access_key:
     secure: jQVzfDodzLWbzOKAHlXLk8D+rqZCrR1V9KxSWWTEPyuYcJIgJTROUUF5am970d2EGtTz+0vxRd9z5zZE2vjo/Qzujufwcf9fDEm1dXJQa/phGXKZENy0MTBtAIqtM59BS1IihwsXKlPqXnsZQY4Sbqm3bShUXEwPj93qYjHjS6M=
