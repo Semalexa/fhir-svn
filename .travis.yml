@@ -20,7 +20,7 @@ env:
 before_install:
 - openssl aes-256-cbc -K $encrypted_7d142fa10e4e_key -iv $encrypted_7d142fa10e4e_iv -in deploy.build.fhir.org.enc -out ~/deploy.build.fhir.org -d
 - chmod 600 ~/deploy.build.fhir.org
-- sudo pip install boto
+- sudo pip install --upgrade boto 
 - curl https://raw.githubusercontent.com/mishudark/s3-parallel-put/b091a6ec9abd684d14c1d35b1a99164a9077e3f3/s3-parallel-put > ~/s3-parallel-put
 - chmod +x ~/s3-parallel-put
 - mkdir fhir-spec
