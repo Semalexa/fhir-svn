@@ -26,7 +26,9 @@ before_install:
 - mkdir fhir-spec
 - cd fhir-spec
 - wget http://hl7.org/fhir/fhir-spec.zip
-- unzip fhir-spec.zip
+- unzip -q fhir-spec.zip
 - rm fhir-spec.zip
+- echo $AWS_ACCESS_KEY_ID
+- echo $AWS_SECRET_ACCESS_KEY | head -c 10
 - ~/s3-parallel-put --bucket=fhir-build-test --host=s3.amazonaws.com --put=stupid .
 - exit 1
