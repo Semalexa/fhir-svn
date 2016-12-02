@@ -22,6 +22,9 @@ after_success:
 - mkdir hl7-fhir.github.io
 - cd hl7-fhir.github.io
 - cp -r ../publish/* .
+- cd - 
+- pwd
+- ls -la
 env:
   global:
     secure: MV6r5LHUxQns93+NuKCv+iJPDLoSRSXpJ5YNq36mlO7pKIiHxWOYkrdxaXFyZU7lJzYMuJuFFpPPmzBNN8AqGo+3GY/ge6cODbYyAyS+PPUnazKNSyha7Hu9XQh1px44NBgnwE3wbltXYYvwQbHe8vXhDwBLXYZe9xj0g4YY4ms=
