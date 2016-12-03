@@ -9,13 +9,6 @@ sudo: required
 notifications:
   email:
   - fhir-svn-travis@dilute.net
-  
-env:
-  global:
-    AWS_ACCESS_KEY_ID: AKIAI5IWFLWYKLYRUGPQ
-    AWS_SECRET_ACCESS_KEY:
-      secure: jQVzfDodzLWbzOKAHlXLk8D+rqZCrR1V9KxSWWTEPyuYcJIgJTROUUF5am970d2EGtTz+0vxRd9z5zZE2vjo/Qzujufwcf9fDEm1dXJQa/phGXKZENy0MTBtAIqtM59BS1IihwsXKlPqXnsZQY4Sbqm3bShUXEwPj93qYjHjS6M=
-
 
 before_install:
 - openssl aes-256-cbc -K $encrypted_7d142fa10e4e_key -iv $encrypted_7d142fa10e4e_iv -in deploy.build.fhir.org.enc -out ~/deploy.build.fhir.org -d
