@@ -23,5 +23,5 @@ before_install:
 - wget http://hl7.org/fhir/fhir-spec.zip
 - unzip -q fhir-spec.zip
 - rm fhir-spec.zip
-- aws s3 cp . s3://fhir-build-test --recursive
+- aws s3 cp . s3://fhir-build-test --recursive --quiet
 - exit 1
