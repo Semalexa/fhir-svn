@@ -20,15 +20,15 @@ env:
 before_install:
 - openssl aes-256-cbc -K $encrypted_7d142fa10e4e_key -iv $encrypted_7d142fa10e4e_iv -in deploy.build.fhir.org.enc -out ~/deploy.build.fhir.org -d
 - chmod 600 ~/deploy.build.fhir.org
-- sudo pip install --upgrade boto 
+- mkdir ~/.aws
+- openssl aes-256-cbc -K $encrypted_df9311acf27c_key -iv $encrypted_df9311acf27c_iv -in aws.config.enc -out ~/.aws/config -d
+- chmod 600 ~/.aws/config
+- sudo pip install awscli
 - curl https://raw.githubusercontent.com/mishudark/s3-parallel-put/b091a6ec9abd684d14c1d35b1a99164a9077e3f3/s3-parallel-put > ~/s3-parallel-put
-- chmod +x ~/s3-parallel-put
 - mkdir fhir-spec
 - cd fhir-spec
 - wget http://hl7.org/fhir/fhir-spec.zip
 - unzip -q fhir-spec.zip
 - rm fhir-spec.zip
-- echo $AWS_ACCESS_KEY_ID
-- echo $AWS_SECRET_ACCESS_KEY | head -c 10
-- ~/s3-parallel-put --bucket=fhir-build-test --host=s3.amazonaws.com --put=stupid .
+- aws s3 cp . s3://fhir-build-test --recursive
 - exit 1
